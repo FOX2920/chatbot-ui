@@ -46,12 +46,6 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    if (sessionId) {
-      handleSendMessage("Hello!");
-    }
-  }, [sessionId]);
-
   return (
     <div className="App">
       <header>
