@@ -1,13 +1,17 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from dotenv import load_dotenv
 import google.generativeai as genai
+
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)  # Để xử lý các yêu cầu CORS từ frontend
 
 # Thiết lập khóa API của bạn
-GOOGLE_API_KEY = 'AIzaSyBS1YPnwCX3uZKMuXQXep7yDdVT5Y7tjYQ'
-genai.configure(api_key=GOOGLE_API_KEY)
+genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 
 # Tạo một session chat
 model = genai.GenerativeModel('gemini-1.5-flash')
