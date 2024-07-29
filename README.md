@@ -51,7 +51,7 @@ Before you begin, ensure you have met the following requirements:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/ai-chatbot.git
+   git clone https://github.com/FOX2920/chatbot-ui.git
    cd ai-chatbot/frontend
    ```
 
