@@ -21,7 +21,7 @@ function App() {
     setIsTyping(true);
 
     try {
-      const response = await fetch('http://localhost:5000/chat', {
+      const response = await fetch('https://chatbot-ui-9i2s.onrender.com/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
